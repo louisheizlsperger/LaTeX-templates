@@ -57,9 +57,9 @@ LaTeX-templates/
 1. In your Overleaf project, go to **Add file → From external URL**.
 2. Add the **raw GitHub URLs** for the files that project needs. Examples (replace `<USER>` if needed):
    - Slides:
-     - `https://raw.githubusercontent.com/<USER>/LaTeX-templates/main/classes/slides.cls`
-     - `https://raw.githubusercontent.com/<USER>/LaTeX-templates/main/styles/shared.sty`
-     - `https://raw.githubusercontent.com/<USER>/LaTeX-templates/main/styles/beamerthemeCommon.sty`
+     - `https://raw.githubusercontent.com/louisheizlsperger/LaTeX-templates/main/classes/slides.cls`
+     - `https://raw.githubusercontent.com/louisheizlsperger/LaTeX-templates/main/styles/shared.sty`
+     - `https://raw.githubusercontent.com/louisheizlsperger/LaTeX-templates/main/styles/beamerthemeCommon.sty`
    - Teaching slides:
      - `classes/teaching-slides.cls`, `styles/shared.sty`, `styles/beamerthemeCommon.sty` (+ `styles/teaching-math.sty` if needed)
    - Draft/paper:
