@@ -1,0 +1,32 @@
+\ProvidesPackage{beamerthemeCommon}[2025/10/05 v0.2 Beamer theme]
+% Minimal, safe defaults that work on Overleaf without extra installs.
+% You can swap the theme if you prefer (e.g., Metropolis) provided it's available.
+\mode<presentation>{%
+  \usetheme{Madrid}% or try: \usetheme[numbering=fraction]{metropolis}
+}
+
+% Colors & structure
+\definecolor{Primary}{RGB}{27,77,137}
+\setbeamercolor{structure}{fg=Primary}
+\setbeamercolor{title}{fg=Primary}
+\setbeamercolor{frametitle}{fg=Primary}
+
+% Clean look
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+
+% Frame number in footer
+\setbeamertemplate{footline}[frame number]
+
+% Section title frames
+\AtBeginSection[]{
+  \begin{frame}
+    \vfill
+    \centering
+    \usebeamerfont{section title}\insertsectionhead\par
+    \vfill
+  \end{frame}
+}
+
+% Slightly tighter itemize/enumerate
+\setlength{\leftmargini}{1.4em}

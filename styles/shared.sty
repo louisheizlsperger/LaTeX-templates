@@ -1,0 +1,90 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{shared}[2025/10/05 v0.2 Shared preamble (consolidated math)]
+
+%% ------------------------------------------------------------------
+%% Encoding & fonts
+%% ------------------------------------------------------------------
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage{microtype}
+
+%% ------------------------------------------------------------------
+%% Core math packages
+%% ------------------------------------------------------------------
+\RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\mathtoolsset{showonlyrefs} % number only referenced equations
+\RequirePackage{bbm}        % for \mathbbm{1} indicator
+
+%% ------------------------------------------------------------------
+%% Figures / tables / colors
+%% ------------------------------------------------------------------
+\RequirePackage{graphicx}
+\RequirePackage{booktabs}
+\RequirePackage{xcolor}
+
+%% ------------------------------------------------------------------
+%% COMMON OPERATORS & MACROS (used across papers, slides, psets)
+%% ------------------------------------------------------------------
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\newcommand{\Prob}{\mathbb{P}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% Indicator, bars, stars
+\newcommand{\1}{\mathbbm{1}}
+\newcommand{\Ybar}{\overline{Y}}
+\newcommand{\betast}{\beta^{\!*}}
+
+% Independence & i.i.d.
+\newcommand{\indep}{\perp\!\!\!\perp}
+\newcommand{\simiid}{\stackrel{\text{iid}}{\sim}}
+\newcommand{\simind}{\stackrel{\text{ind}}{\sim}}
+
+% Convergence
+\newcommand{\pto}{\xrightarrow{\mathbb{P}}}  % probability
+\newcommand{\dto}{\xrightarrow{d}}           % distribution
+\newcommand{\asto}{\xrightarrow{\text{a.s.}}}
+
+% Distributions
+\newcommand{\Normal}{\mathcal{N}}
+\newcommand{\Bin}{\mathrm{Bin}}
+\newcommand{\Poisson}{\mathrm{Pois}}
+\newcommand{\Uniform}{\mathrm{Unif}}
+\newcommand{\GammaDist}{\mathrm{\Gamma}}
+\newcommand{\ExpDist}{\mathrm{Exp}}
+
+% Paired delimiters (use \abs* to auto-size)
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\brak}{[}{]}
+\DeclarePairedDelimiter{\braces}{\{}{\}}
+\DeclarePairedDelimiter{\paren}{(}{)}
+\DeclarePairedDelimiterX{\inner}[2]{\langle}{\rangle}{#1,#2}
+
+% Number the next equation inside align* / gather* etc.
+\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
+
+%% ------------------------------------------------------------------
+%% Theorems (neutral styling works in article & beamer)
+%% ------------------------------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+
+%% ------------------------------------------------------------------
+%% IMPORTANT: We intentionally DO NOT load hyperref or cleveref here.
+%% - Beamer loads hyperref itself.
+%% - For articles, load \usepackage{hyperref} in the class (e.g., draft.cls),
+%%   then load cleveref after hyperref if you use it.
+%% ------------------------------------------------------------------
+
+\typeout{shared.sty v0.2 (2025-10-05) loaded}
