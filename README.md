@@ -22,7 +22,7 @@ LaTeX-templates/
 │  ├─ draft.cls
 │  ├─ referee-report.cls
 │  └─ pset.cls
-└─ templates/                   # minimal starters (optional)
+└─ templates/                   # (to be added later)
    ├─ slides/main.tex
    ├─ teaching-slides/main.tex
    ├─ draft/main.tex
